@@ -17,7 +17,7 @@ export const NAV_LINKS: NavItem[] = [
 ];
 
 export const SOCIAL_LINKS = {
-  facebook: 'https://www.facebook.com/OnBoardingAgency',
+  facebook: 'https://www.facebook.com/share/19yXAkUPZU/?mibextid=wwXIfr',
   linkedin: 'https://www.linkedin.com/company/onboarding-agency/',
 };
 
