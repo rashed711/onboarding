@@ -63,11 +63,11 @@ export const SERVICES: ServiceItem[] = [
   }
 ];
 
-// Helper to generate logo URLs based on the user's provided pattern
+// Helper to generate logo URLs based on the updated pattern: images/Partnerships/[Region]/[Name].webp
 const generateLogoUrl = (name: string, region: string) => {
   const folder = region === 'Saudi Arabia' ? 'KSA' : 'Egypt';
   const encodedName = encodeURIComponent(name);
-  return `https://onboarding4u.com/images/${folder}/${encodedName}.webp`;
+  return `https://onboarding4u.com/images/Partnerships/${folder}/${encodedName}.webp`;
 };
 
 export const CLIENTS: ClientItem[] = [
