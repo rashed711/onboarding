@@ -27,7 +27,7 @@ export const SERVICES: ServiceItem[] = [
     title: 'Human Capital & HR Systems',
     description: 'We optimize the pharmacists and retail specialists who drive your reputation and revenue. From recruitment to executive leadership development.',
     icon: 'Users',
-    image: 'https://i.pinimg.com/1200x/a1/a3/7a/a1a37ad5bc8cbe96bdbd89afbb4a5208.jpg',
+    image: 'https://onboarding4u.com/images/Services/001.webp',
     points: [
       'Strategic Pharmacist Acquisition',
       'Clinical Excellence Training',
@@ -40,7 +40,7 @@ export const SERVICES: ServiceItem[] = [
     title: 'Operational Rigor & SOPs',
     description: 'Eliminate waste and drive standardized excellence across every square meter of your retail footprint through engineering-grade operations.',
     icon: 'ClipboardCheck',
-    image: 'https://i.pinimg.com/1200x/34/fb/bb/34fbbb98f649e9efdb77fde3734eaec2.jpg',
+    image: 'https://onboarding4u.com/images/Services/002.webp',
     points: [
       'Inventory Yield Optimization',
       'Chain-Wide SOP Standardization',
@@ -53,7 +53,7 @@ export const SERVICES: ServiceItem[] = [
     title: 'Pharma Marketing & Category',
     description: 'Data-driven category management and brand positioning that captures higher patient share in saturated Middle Eastern markets.',
     icon: 'TrendingUp',
-    image: 'https://i.pinimg.com/1200x/01/94/ee/0194ee7f94c3710c64d1608771eb7896.jpg',
+    image: 'https://onboarding4u.com/images/Services/003.webp',
     points: [
       'Category Management & Pricing',
       'Patient Loyalty & CRM Strategy',
