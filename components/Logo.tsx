@@ -12,7 +12,7 @@ const Logo: React.FC<LogoProps> = ({ className = "", light = false }) => {
       {/* Logo Image */}
       <div className="relative shrink-0">
         <img 
-          src="https://l.top4top.io/p_36633ch2t1.png" 
+          src="https://onboarding4u.com/images/logo/logo.webp" 
           alt="Onboarding 4 U Logo" 
           className="h-8 md:h-11 lg:h-12 w-auto object-contain transition-all duration-300"
         />

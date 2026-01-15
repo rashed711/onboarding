@@ -46,7 +46,7 @@ const Home: React.FC = () => {
         {/* Mobile Background: High Contrast & Visibility */}
         <div className="absolute inset-0 z-0 lg:hidden overflow-hidden">
           <img 
-            src="https://i.pinimg.com/736x/1d/de/6c/1dde6c370e186de309c9d454acd6e8d4.jpg" 
+            src="https://onboarding4u.com/images/Home/hero.webp" 
             alt="Consulting Background" 
             className="w-full h-full object-cover scale-110 blur-[1px] md:blur-0 opacity-30 md:opacity-20"
           />
@@ -113,7 +113,7 @@ const Home: React.FC = () => {
             >
               <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl border-[12px] border-white bg-white">
                 <img 
-                  src="https://i.pinimg.com/736x/1d/de/6c/1dde6c370e186de309c9d454acd6e8d4.jpg" 
+                  src="https://onboarding4u.com/images/Home/hero.webp" 
                   alt="Professional Healthcare Consulting" 
                   className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-1000"
                 />

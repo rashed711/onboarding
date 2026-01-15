@@ -14,7 +14,7 @@ const SEO: React.FC<SEOProps> = ({ title, description, image, article }) => {
   const siteName = "Onboarding 4 U";
   const fullTitle = `${title} | ${siteName}`;
   const siteUrl = window.location.origin;
-  const defaultImage = "https://l.top4top.io/p_36633ch2t1.png"; // Your brand logo
+  const defaultImage = "https://onboarding4u.com/images/logo/logo.webp"; // Your brand logo
   const seoImage = image || defaultImage;
 
   useEffect(() => {
