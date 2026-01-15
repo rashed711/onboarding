@@ -3,6 +3,7 @@ import React from 'react';
 import { motion, Variants } from 'framer-motion';
 import { CLIENTS } from '../constants';
 import { Quote, Globe, Building2, Landmark } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 30 },
@@ -27,6 +28,11 @@ const Clients: React.FC = () => {
 
   return (
     <div className="pt-24 flex flex-col">
+      <SEO 
+        title="Partnerships | Regional Pharma Footprint" 
+        description="Onboarding 4U partners with leading pharmacy chains in Egypt and Saudi Arabia. See our regional impact and clinical retail partners."
+      />
+
       {/* Header */}
       <section className="bg-white py-24 md:py-32 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

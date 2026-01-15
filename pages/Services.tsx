@@ -3,10 +3,16 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { SERVICES } from '../constants';
 import { Users, ClipboardCheck, TrendingUp, ChevronRight } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Services: React.FC = () => {
   return (
     <div className="pt-24 flex flex-col">
+      <SEO 
+        title="Strategic Services | Pharma Retail Solutions" 
+        description="Explore our practice areas in Human Capital, Operational SOPs, and Pharma Marketing. Specialized consulting for retail pharmacy chains in the MENA region."
+      />
+
       {/* Header */}
       <section className="bg-charcoal text-white py-32 text-center relative overflow-hidden">
         <motion.div 

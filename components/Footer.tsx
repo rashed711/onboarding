@@ -11,6 +11,7 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
           <div className="col-span-1 md:col-span-1">
+            {/* Using light={true} now only makes the text white, keeping the logo colors intact */}
             <Logo light={true} className="mb-8" />
             <p className="text-gray-400 text-sm leading-relaxed mb-8 max-w-xs">
               Empowering pharmaceutical retail chains across the Middle East with strategic consulting and operational excellence. 
@@ -83,7 +84,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col gap-1">
             <p>© {new Date().getFullYear()} Onboarding 4U. Strategic Excellence.</p>
             <p className="text-gray-600">
-              تم التصميم بواسطة <a href="https://enjaz.app" target="_blank" rel="noopener noreferrer" className="text-[#E31E24] hover:text-white transition-colors">شركة انجاز للحلول الذكية</a>
+              Designed by <a href="https://enjaz.app" target="_blank" rel="noopener noreferrer" className="text-[#E31E24] hover:text-white transition-colors">Enjaz Smart Solutions</a>
             </p>
           </div>
           <div className="flex gap-8 mt-6 md:mt-0">

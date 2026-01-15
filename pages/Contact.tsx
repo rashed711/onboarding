@@ -3,6 +3,7 @@ import React from 'react';
 import { motion, Variants } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock, Calendar, Facebook, Linkedin } from 'lucide-react';
 import { CONTACT_INFO, SOCIAL_LINKS } from '../constants';
+import SEO from '../components/SEO';
 
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 30 },
@@ -24,6 +25,11 @@ const staggerContainer: Variants = {
 const Contact: React.FC = () => {
   return (
     <div className="pt-24 flex flex-col min-h-screen">
+      <SEO 
+        title="Consultation | Book a Portfolio Audit" 
+        description="Connect with our senior pharmaceutical retail consultants. Book a strategy session or portfolio audit for your pharmacy chain today."
+      />
+
       <section className="bg-white py-24 flex-grow">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { motion, Variants } from 'framer-motion';
 import { ArrowRight, ChevronRight, Users, ClipboardCheck, TrendingUp, ShieldCheck, Landmark, Globe, ExternalLink } from 'lucide-react';
 import { SERVICES } from '../constants';
+import SEO from '../components/SEO';
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -34,6 +35,11 @@ const fadeInVariants: Variants = {
 const Home: React.FC = () => {
   return (
     <div className="flex flex-col">
+      <SEO 
+        title="Strategic Pharmaceutical Retail Advisory" 
+        description="Onboarding 4U is the premier strategic partner for pharmaceutical retail chains in Egypt and Saudi Arabia. We fix operations and drive sustainable scale."
+      />
+      
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-24 md:pt-20 overflow-hidden bg-white">
         <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none">
@@ -90,7 +96,7 @@ const Home: React.FC = () => {
             >
               <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-[12px] border-white">
                 <img 
-                  src="https://i.pinimg.com/736x/13/f4/87/13f487ff8241887dc9ec125f71f4fb32.jpg" 
+                  src="https://i.pinimg.com/736x/1d/de/6c/1dde6c370e186de309c9d454acd6e8d4.jpg" 
                   alt="Professional Healthcare Consulting" 
                   className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-1000"
                 />
@@ -108,9 +114,6 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Mobile Trust Bar */}
-      
 
       {/* Services Section */}
       <section className="py-20 md:py-32 bg-gray-50">

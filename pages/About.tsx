@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
 import { Target, Eye, Award, CheckCircle2 } from 'lucide-react';
+import SEO from '../components/SEO';
 
 // Fixed variant types and added tuple casting for cubic-bezier ease values
 const fadeInUp: Variants = {
@@ -24,6 +25,11 @@ const staggerContainer: Variants = {
 const About: React.FC = () => {
   return (
     <div className="pt-24 flex flex-col">
+      <SEO 
+        title="The Firm | Specialist Pharmaceutical Advisors" 
+        description="Learn about Onboarding 4U's mission to elevate pharmaceutical retail standards in the Middle East through specialized excellence and regional mastery."
+      />
+
       {/* Hero */}
       <section className="bg-gray-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

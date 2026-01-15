@@ -9,14 +9,11 @@ interface LogoProps {
 const Logo: React.FC<LogoProps> = ({ className = "", light = false }) => {
   return (
     <div className={`flex items-center gap-2 select-none ${className}`}>
-      {/* Logo Image */}
+      {/* Logo Image - Preserving brand colors */}
       <img 
         src="https://l.top4top.io/p_36633ch2t1.png" 
         alt="Onboarding 4 U Logo" 
-        className={`
-          h-8 md:h-10 lg:h-12 w-auto object-contain transition-all duration-300
-          ${light ? 'brightness-0 invert opacity-90' : ''}
-        `}
+        className="h-8 md:h-10 lg:h-12 w-auto object-contain transition-all duration-300"
       />
       
       {/* Brand Name Text */}
