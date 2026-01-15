@@ -80,10 +80,15 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-gray-800 pt-10 flex flex-col md:flex-row justify-between items-center text-[11px] text-gray-500 font-bold uppercase tracking-widest">
-          <p>© {new Date().getFullYear()} Onboarding 4U. Strategic Excellence.</p>
+          <div className="flex flex-col gap-1">
+            <p>© {new Date().getFullYear()} Onboarding 4U. Strategic Excellence.</p>
+            <p className="text-gray-600">
+              تم التصميم بواسطة <a href="https://enjaz.app" target="_blank" rel="noopener noreferrer" className="text-[#E31E24] hover:text-white transition-colors">شركة انجاز للحلول الذكية</a>
+            </p>
+          </div>
           <div className="flex gap-8 mt-6 md:mt-0">
-            <Link to="#" className="hover:text-[#E31E24] transition-colors">Privacy Policy</Link>
-            <Link to="#" className="hover:text-[#E31E24] transition-colors">Terms of Service</Link>
+            <Link to="/privacy" className="hover:text-[#E31E24] transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-[#E31E24] transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

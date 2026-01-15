@@ -90,7 +90,7 @@ const Home: React.FC = () => {
             >
               <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-[12px] border-white">
                 <img 
-                  src="https://i.pinimg.com/736x/e6/cd/a9/e6cda9d9eb93ef44a316582e67a4bada.jpg" 
+                  src="https://i.pinimg.com/736x/13/f4/87/13f487ff8241887dc9ec125f71f4fb32.jpg" 
                   alt="Professional Healthcare Consulting" 
                   className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-1000"
                 />

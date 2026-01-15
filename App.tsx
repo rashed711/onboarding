@@ -9,6 +9,8 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Clients from './pages/Clients';
 import Contact from './pages/Contact';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -39,6 +41,8 @@ const AnimatedRoutes = () => {
         <Route path="/services" element={<PageWrapper><Services /></PageWrapper>} />
         <Route path="/clients" element={<PageWrapper><Clients /></PageWrapper>} />
         <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
+        <Route path="/privacy" element={<PageWrapper><PrivacyPolicy /></PageWrapper>} />
+        <Route path="/terms" element={<PageWrapper><TermsOfService /></PageWrapper>} />
       </Routes>
     </AnimatePresence>
   );
