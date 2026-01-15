@@ -48,11 +48,10 @@ const Home: React.FC = () => {
           <img 
             src="https://i.pinimg.com/736x/1d/de/6c/1dde6c370e186de309c9d454acd6e8d4.jpg" 
             alt="Consulting Background" 
-            className="w-full h-full object-cover scale-110 blur-[1px] md:blur-0 opacity-40 md:opacity-30"
+            className="w-full h-full object-cover scale-110 blur-[1px] md:blur-0 opacity-30 md:opacity-20"
           />
-          {/* Professional Overlay Gradients */}
-          <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/60 to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent"></div>
+          {/* Professional Overlay Gradients - Darker for better text contrast */}
+          <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/80 to-charcoal/40"></div>
         </div>
 
         {/* Desktop Grid Pattern (Only Desktop) */}
@@ -75,16 +74,16 @@ const Home: React.FC = () => {
               variants={containerVariants}
               className="text-center lg:text-left"
             >
-              <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 lg:bg-red-50 text-[#E31E24] text-[10px] md:text-xs font-black uppercase tracking-widest mb-6 border border-red-500/20 lg:border-red-100 mx-auto lg:mx-0 backdrop-blur-md lg:backdrop-blur-none">
+              <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/20 lg:bg-red-50 text-[#E31E24] text-[10px] md:text-xs font-black uppercase tracking-widest mb-6 border border-red-500/30 lg:border-red-100 mx-auto lg:mx-0 backdrop-blur-md lg:backdrop-blur-none">
                 <span className="flex h-2 w-2 rounded-full bg-[#E31E24] animate-pulse"></span>
                 Middle East Strategic Leader
               </motion.div>
               
-              <motion.h1 variants={itemVariants} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white lg:text-charcoal leading-[1.1] mb-6 md:mb-8 tracking-tight">
+              <motion.h1 variants={itemVariants} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white lg:text-gray-900 leading-[1.1] mb-6 md:mb-8 tracking-tight">
                 We Fix <span className="text-[#E31E24]">What’s</span> Silently Killing Pharmacy Performance.
               </motion.h1>
               
-              <motion.p variants={itemVariants} className="text-base md:text-xl text-gray-300 lg:text-gray-500 mb-8 md:mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0">
+              <motion.p variants={itemVariants} className="text-base md:text-xl text-gray-200 lg:text-gray-500 mb-8 md:mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0">
                 Onboarding 4U is the premier strategic partner for pharmaceutical retail chains in Egypt and Saudi Arabia. We drive sustainable scale through operational precision.
               </motion.p>
               
@@ -98,7 +97,7 @@ const Home: React.FC = () => {
                 </Link>
                 <Link
                   to="/services"
-                  className="bg-white/10 lg:bg-white/80 backdrop-blur-md border border-white/20 lg:border-gray-200 text-white lg:text-charcoal px-8 md:px-10 py-4 md:py-5 rounded-xl font-black text-center hover:bg-white hover:text-charcoal transition-all flex items-center justify-center gap-2 text-sm md:text-base active:scale-[0.98]"
+                  className="bg-white/90 lg:bg-white/80 backdrop-blur-md border border-white/40 lg:border-gray-300 text-charcoal px-8 md:px-10 py-4 md:py-5 rounded-xl font-black text-center hover:bg-white hover:text-charcoal transition-all flex items-center justify-center gap-2 text-sm md:text-base active:scale-[0.98]"
                 >
                   Practice Areas
                 </Link>
