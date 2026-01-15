@@ -1,9 +1,10 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
-import { Menu, X, ArrowRight } from 'lucide-react';
+import { Menu, X, ArrowRight, Home, Info, Briefcase, Handshake, MessageSquare, Facebook, Linkedin } from 'lucide-react';
 import Logo from './Logo';
-import { NAV_LINKS } from '../constants';
+import { NAV_LINKS, SOCIAL_LINKS } from '../constants';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +17,6 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // إغلاق القائمة عند تغيير المسار
   useEffect(() => {
     setIsOpen(false);
     document.body.style.overflow = 'unset';
@@ -33,15 +33,21 @@ const Navbar: React.FC = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
-  // Add explicit Variants typing and cast ease array to match Framer Motion expectations
   const menuVariants: Variants = {
-    closed: { opacity: 0, x: '100%' },
-    open: { 
-      opacity: 1, 
-      x: 0,
+    closed: { 
+      opacity: 0, 
+      y: '-100%',
       transition: { 
         duration: 0.5, 
-        ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
+        ease: [0.32, 0, 0.67, 0] 
+      }
+    },
+    open: { 
+      opacity: 1, 
+      y: 0,
+      transition: { 
+        duration: 0.6, 
+        ease: [0.22, 1, 0.36, 1],
         staggerChildren: 0.1,
         delayChildren: 0.2
       }
@@ -49,13 +55,24 @@ const Navbar: React.FC = () => {
   };
 
   const itemVariants: Variants = {
-    closed: { opacity: 0, x: 20 },
-    open: { opacity: 1, x: 0 }
+    closed: { opacity: 0, y: 20 },
+    open: { opacity: 1, y: 0 }
+  };
+
+  const getIcon = (label: string) => {
+    switch (label) {
+      case 'Home': return <Home size={20} />;
+      case 'The Firm': return <Info size={20} />;
+      case 'Strategic Services': return <Briefcase size={20} />;
+      case 'Partnerships': return <Handshake size={20} />;
+      case 'Consultation': return <MessageSquare size={20} />;
+      default: return null;
+    }
   };
 
   return (
-    <nav className={`fixed top-0 w-full z-[100] transition-all duration-500 ${isScrolled || isOpen ? 'bg-white/95 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-6'}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className={`fixed top-0 w-full z-[100] transition-all duration-500 ${isScrolled || isOpen ? 'bg-white/95 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-5 md:py-8'}`}>
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex-shrink-0 z-[110]">
             <Logo className={isScrolled ? 'scale-90 transform-gpu origin-left' : 'scale-100 transform-gpu origin-left'} />
@@ -77,7 +94,7 @@ const Navbar: React.FC = () => {
             ))}
             <Link
               to="/contact"
-              className="bg-[#E31E24] text-white px-7 py-2.5 rounded-full text-[10px] font-black hover:bg-[#1F2937] transition-all shadow-lg hover:shadow-red-500/20 uppercase tracking-widest"
+              className="bg-[#E31E24] text-white px-7 py-2.5 rounded-full text-[10px] font-black hover:bg-charcoal transition-all shadow-lg hover:shadow-red-500/20 uppercase tracking-widest"
             >
               CONSULTATION
             </Link>
@@ -87,16 +104,16 @@ const Navbar: React.FC = () => {
           <div className="md:hidden z-[110]">
             <button 
               onClick={toggleMenu} 
-              className="p-2 text-[#1F2937] focus:outline-none"
+              className={`p-2 transition-colors duration-300 ${isOpen ? 'text-[#E31E24]' : 'text-[#1F2937]'}`}
               aria-label="Toggle Menu"
             >
-              {isOpen ? <X size={28} className="text-[#E31E24]" /> : <Menu size={28} />}
+              {isOpen ? <X size={32} strokeWidth={2.5} /> : <Menu size={32} strokeWidth={2.5} />}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Modern Mobile Menu Overlay */}
+      {/* Improved Mobile Menu Overlay */}
       <AnimatePresence>
         {isOpen && (
           <motion.div 
@@ -104,38 +121,53 @@ const Navbar: React.FC = () => {
             animate="open"
             exit="closed"
             variants={menuVariants}
-            className="fixed inset-0 bg-white z-[105] flex flex-col md:hidden pt-24 px-6"
+            className="fixed inset-0 bg-white z-[105] flex flex-col md:hidden pt-28 px-8 overflow-y-auto"
           >
-            <div className="flex flex-col space-y-2 mt-8">
+            <div className="flex flex-col space-y-1">
               {NAV_LINKS.map((link) => (
                 <motion.div key={link.path} variants={itemVariants}>
                   <Link
                     to={link.path}
-                    className={`text-4xl font-black uppercase tracking-tighter flex items-center justify-between py-4 border-b border-gray-50 ${isActive(link.path) ? 'text-[#E31E24]' : 'text-[#1F2937]'}`}
+                    className={`text-3xl font-black uppercase tracking-tighter flex items-center justify-between py-5 border-b border-gray-50 group active:text-[#E31E24] ${isActive(link.path) ? 'text-[#E31E24]' : 'text-charcoal'}`}
                   >
-                    {link.label}
-                    {isActive(link.path) && <ArrowRight size={24} className="text-[#E31E24]" />}
+                    <span className="flex items-center gap-4">
+                      <span className={`p-2 rounded-lg ${isActive(link.path) ? 'bg-red-50' : 'bg-gray-50 group-active:bg-red-50'}`}>
+                        {getIcon(link.label)}
+                      </span>
+                      {link.label}
+                    </span>
+                    <ArrowRight size={24} className={`transition-transform ${isActive(link.path) ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'}`} />
                   </Link>
                 </motion.div>
               ))}
             </div>
 
-            <motion.div variants={itemVariants} className="mt-12">
+            <motion.div variants={itemVariants} className="mt-12 mb-8">
               <Link
                 to="/contact"
-                className="w-full bg-[#E31E24] text-white py-6 rounded-2xl text-center font-black text-xl uppercase tracking-widest shadow-2xl flex items-center justify-center gap-4"
+                className="w-full bg-[#E31E24] text-white py-5 rounded-2xl text-center font-black text-lg uppercase tracking-widest shadow-xl flex items-center justify-center gap-3 active:scale-[0.98] transition-transform"
               >
                 Get Started
-                <ArrowRight size={24} />
+                <ArrowRight size={20} />
               </Link>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="mt-auto pb-12 text-center">
-              <p className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-4">Strategic Excellence in MENA</p>
-              <div className="flex justify-center gap-6 text-[#1F2937]">
-                <span className="text-[10px] font-black uppercase">Cairo</span>
-                <span className="text-[10px] font-black uppercase">Riyadh</span>
-                <span className="text-[10px] font-black uppercase">Jeddah</span>
+            <motion.div variants={itemVariants} className="mt-auto pb-10">
+              <div className="flex justify-center gap-8 mb-8">
+                <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-charcoal active:bg-red-50 active:text-[#E31E24] transition-colors">
+                  <Facebook size={20} />
+                </a>
+                <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center text-charcoal active:bg-red-50 active:text-[#E31E24] transition-colors">
+                  <Linkedin size={20} />
+                </a>
+              </div>
+              <p className="text-center text-gray-400 text-[10px] font-black uppercase tracking-[0.3em] mb-4">Strategic Partners In</p>
+              <div className="flex justify-center gap-4 text-charcoal/40 font-black text-[9px] uppercase tracking-widest">
+                <span>Cairo</span>
+                <span className="text-[#E31E24]">•</span>
+                <span>Riyadh</span>
+                <span className="text-[#E31E24]">•</span>
+                <span>Jeddah</span>
               </div>
             </motion.div>
           </motion.div>
