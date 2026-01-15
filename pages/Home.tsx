@@ -60,7 +60,7 @@ const Home: React.FC = () => {
                 Middle East Specialized Advisory
               </motion.div>
               <motion.h1 variants={itemVariants} className="text-4xl sm:text-5xl md:text-7xl font-black text-charcoal leading-[1.1] mb-6 md:mb-8">
-                Strategic <span className="text-[#E31E24]">Rigor</span> for Retail Pharmacy.
+                We Fix <span className="text-[#E31E24]">What’s</span> Silently Killing Pharmacy Performance.
               </motion.h1>
               <motion.p variants={itemVariants} className="text-lg md:text-xl text-gray-500 mb-8 md:mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0">
                 Onboarding 4U is the premier strategic partner for pharmaceutical retail chains in Egypt and Saudi Arabia. We drive sustainable scale through operational precision.
@@ -90,7 +90,7 @@ const Home: React.FC = () => {
             >
               <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-[12px] border-white">
                 <img 
-                  src="https://i.pinimg.com/736x/4b/f6/1f/4bf61f7bec0d6e6d35644df9f76e210e.jpg" 
+                  src="https://i.pinimg.com/736x/e6/cd/a9/e6cda9d9eb93ef44a316582e67a4bada.jpg" 
                   alt="Professional Healthcare Consulting" 
                   className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-1000"
                 />
@@ -110,30 +110,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Mobile Trust Bar */}
-      <section className="py-12 md:py-16 bg-white border-b border-gray-50 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.div 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={containerVariants}
-            className="flex flex-col items-center gap-8 md:gap-12"
-          >
-            <motion.p variants={itemVariants} className="text-[10px] md:text-xs font-black text-gray-400 uppercase tracking-[0.4em] text-center">
-              Strategic Partners Across the Region
-            </motion.p>
-            <motion.div 
-              variants={containerVariants}
-              className="flex flex-wrap justify-center items-center gap-8 md:gap-24 grayscale opacity-40 px-4"
-            >
-               <motion.span variants={itemVariants} className="text-xl md:text-2xl font-black text-charcoal tracking-tighter italic">EGYPHARMA</motion.span>
-               <motion.span variants={itemVariants} className="text-xl md:text-2xl font-black text-charcoal tracking-tighter italic">KSAMED</motion.span>
-               <motion.span variants={itemVariants} className="text-xl md:text-2xl font-black text-charcoal tracking-tighter italic">RETAILCARE</motion.span>
-               <motion.span variants={itemVariants} className="text-xl md:text-2xl font-black text-charcoal tracking-tighter italic">CLINICORP</motion.span>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
+      
 
       {/* Services Section */}
       <section className="py-20 md:py-32 bg-gray-50">
@@ -209,8 +186,8 @@ const Home: React.FC = () => {
                     <div className="flex items-center gap-4 relative z-10">
                       <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-red-200 border-2 border-white"></div>
                       <div>
-                        <p className="font-black text-charcoal text-sm md:text-base leading-none mb-1">Dr. Ahmed Salem</p>
-                        <p className="text-[10px] md:text-xs text-[#E31E24] font-black uppercase tracking-widest">COO, Regional Pharmacy Chain</p>
+                        <p className="font-black text-charcoal text-sm md:text-base leading-none mb-1">Dr. Tarek Hosney</p>
+                        <p className="text-[10px] md:text-xs text-[#E31E24] font-black uppercase tracking-widest">COO, Gabr pharmacy chain</p>
                       </div>
                     </div>
                  </motion.div>

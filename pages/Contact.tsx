@@ -1,8 +1,8 @@
 
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
-import { Mail, Phone, MapPin, Clock, Calendar } from 'lucide-react';
-import { CONTACT_INFO } from '../constants';
+import { Mail, Phone, MapPin, Clock, Calendar, Facebook, Linkedin } from 'lucide-react';
+import { CONTACT_INFO, SOCIAL_LINKS } from '../constants';
 
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 30 },
@@ -78,6 +78,37 @@ const Contact: React.FC = () => {
               </p>
               <p className="text-xs text-gray-400 mt-4 uppercase font-bold tracking-widest">New Cairo, Egypt</p>
             </motion.div>
+          </motion.div>
+
+          {/* Social Presence in Contact Page */}
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+            className="flex flex-col items-center mb-24"
+          >
+            <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-[#E31E24] mb-8">Follow Our Strategic Insights</h4>
+            <div className="flex gap-6">
+              <a 
+                href={SOCIAL_LINKS.facebook} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex items-center gap-3 px-8 py-4 bg-gray-50 border border-gray-100 rounded-2xl text-charcoal font-bold hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              >
+                <Facebook size={20} className="text-[#E31E24]" />
+                <span>Facebook</span>
+              </a>
+              <a 
+                href={SOCIAL_LINKS.linkedin} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex items-center gap-3 px-8 py-4 bg-gray-50 border border-gray-100 rounded-2xl text-charcoal font-bold hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              >
+                <Linkedin size={20} className="text-[#E31E24]" />
+                <span>LinkedIn</span>
+              </a>
+            </div>
           </motion.div>
 
           <motion.div 

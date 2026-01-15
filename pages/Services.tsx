@@ -27,7 +27,7 @@ const Services: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="text-lg text-gray-400"
+            className="text-lg text-gray-200 max-w-2xl mx-auto font-medium"
           >
             Comprehensive consulting solutions focused on the three pillars of retail success: People, Process, and Performance.
           </motion.p>
@@ -79,7 +79,7 @@ const Services: React.FC = () => {
               >
                 <div className="aspect-[4/3] bg-gray-200 rounded-3xl overflow-hidden shadow-2xl relative">
                   <img 
-                    src={`https://picsum.photos/seed/${service.id}/800/600`} 
+                    src={service.image} 
                     alt={service.title} 
                     className="w-full h-full object-cover hover:scale-110 transition-transform duration-1000"
                   />

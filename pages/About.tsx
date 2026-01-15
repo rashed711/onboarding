@@ -96,24 +96,26 @@ const About: React.FC = () => {
               <div className="mb-6 text-[#E31E24]"><Target size={40} /></div>
               <h3 className="text-xl font-bold mb-4">Our Mission</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                To transform pharmaceutical retail into a hub of operational efficiency and professional excellence, ensuring pharmacy chains become sustainable, high-growth enterprises.
+                We help retail pharmacies with 1-10 branches move from daily chaos to structured performance by fixing operations, strengthening teams, and turning strategy into execution.
               </p>
             </motion.div>
             <motion.div variants={fadeInUp} className="p-10 border-t-4 border-charcoal shadow-lg rounded-b-xl">
               <div className="mb-6 text-charcoal"><Eye size={40} /></div>
               <h3 className="text-xl font-bold mb-4">Our Vision</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                To be the undisputed strategic advisor for the top 50 pharmacy chains in the MENA region by 2030, recognized for our impact and regional expertise.
+                To build retail pharmacies that operate with clarity, control, and sustainable growth—regardless of size.
               </p>
             </motion.div>
             <motion.div variants={fadeInUp} className="p-10 border-t-4 border-[#E31E24] shadow-lg rounded-b-xl">
               <div className="mb-6 text-[#E31E24]"><Award size={40} /></div>
               <h3 className="text-xl font-bold mb-4">Our Values</h3>
               <ul className="text-gray-600 text-sm space-y-3">
-                <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#E31E24]" /> Integrity in Data</li>
-                <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#E31E24]" /> Clinical-Level Precision</li>
-                <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#E31E24]" /> Strategic Partnership</li>
-                <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#E31E24]" /> Measurable Outcomes</li>
+                <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#E31E24]" /> Pharmacy-First Thinking</li>
+                <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#E31E24]" /> Execution Over Advice</li>
+                <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#E31E24]" /> Commercial Reality</li>
+                <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#E31E24]" /> Clarity Beats Complexity</li>
+                <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#E31E24]" /> Accountability</li>
+                <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-[#E31E24]" /> Long-Term Partnership</li>
               </ul>
             </motion.div>
           </motion.div>

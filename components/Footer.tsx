@@ -1,9 +1,9 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Linkedin } from 'lucide-react';
 import Logo from './Logo';
-import { NAV_LINKS, CONTACT_INFO } from '../constants';
+import { NAV_LINKS, CONTACT_INFO, SOCIAL_LINKS } from '../constants';
 
 const Footer: React.FC = () => {
   return (
@@ -15,6 +15,26 @@ const Footer: React.FC = () => {
             <p className="text-gray-400 text-sm leading-relaxed mb-8 max-w-xs">
               Empowering pharmaceutical retail chains across the Middle East with strategic consulting and operational excellence. 
             </p>
+            <div className="flex gap-4">
+              <a 
+                href={SOCIAL_LINKS.facebook} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-[#E31E24] hover:text-white transition-all duration-300"
+                aria-label="Facebook"
+              >
+                <Facebook size={18} />
+              </a>
+              <a 
+                href={SOCIAL_LINKS.linkedin} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-[#E31E24] hover:text-white transition-all duration-300"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={18} />
+              </a>
+            </div>
           </div>
 
           <div>
