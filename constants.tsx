@@ -63,23 +63,30 @@ export const SERVICES: ServiceItem[] = [
   }
 ];
 
+// Helper to generate logo URLs based on the user's provided pattern
+const generateLogoUrl = (name: string, region: string) => {
+  const folder = region === 'Saudi Arabia' ? 'KSA' : 'Egypt';
+  const encodedName = encodeURIComponent(name);
+  return `https://onboarding4u.com/images/${folder}/${encodedName}.webp`;
+};
+
 export const CLIENTS: ClientItem[] = [
   // Egypt Partners
-  { name: 'Care Pharmacy', region: 'Egypt', logo: 'https://picsum.photos/seed/care/200/100' },
-  { name: 'Gold Pharmacy', region: 'Egypt', logo: 'https://picsum.photos/seed/gold/200/100' },
-  { name: 'Abdin Pharmacy', region: 'Egypt', logo: 'https://picsum.photos/seed/abdin/200/100' },
-  { name: 'Fouda Pharmacy', region: 'Egypt', logo: 'https://picsum.photos/seed/fouda/200/100' },
-  { name: 'Gabr Pharmacy', region: 'Egypt', logo: 'https://picsum.photos/seed/gabr/200/100' },
-  { name: 'Garhy Pharmacy', region: 'Egypt', logo: 'https://picsum.photos/seed/garhy/200/100' },
-  { name: 'Asker Pharmacy', region: 'Egypt', logo: 'https://picsum.photos/seed/asker/200/100' },
-  { name: 'Reaya Pharmacy', region: 'Egypt', logo: 'https://picsum.photos/seed/reaya/200/100' },
-  { name: 'CPS', region: 'Egypt', logo: 'https://picsum.photos/seed/cps/200/100' },
-  { name: 'Auxilio', region: 'Egypt', logo: 'https://picsum.photos/seed/auxilio/200/100' },
+  { name: 'Care Pharmacy', region: 'Egypt', logo: generateLogoUrl('Care Pharmacy', 'Egypt') },
+  { name: 'Gold Pharmacy', region: 'Egypt', logo: generateLogoUrl('Gold Pharmacy', 'Egypt') },
+  { name: 'Abdin Pharmacy', region: 'Egypt', logo: generateLogoUrl('Abdin Pharmacy', 'Egypt') },
+  { name: 'Fouda Pharmacy', region: 'Egypt', logo: generateLogoUrl('Fouda Pharmacy', 'Egypt') },
+  { name: 'Gabr Pharmacy', region: 'Egypt', logo: generateLogoUrl('Gabr Pharmacy', 'Egypt') },
+  { name: 'Garhy Pharmacy', region: 'Egypt', logo: generateLogoUrl('Garhy Pharmacy', 'Egypt') },
+  { name: 'Asker Pharmacy', region: 'Egypt', logo: generateLogoUrl('Asker Pharmacy', 'Egypt') },
+  { name: 'Reaya Pharmacy', region: 'Egypt', logo: generateLogoUrl('Reaya Pharmacy', 'Egypt') },
+  { name: 'CPS', region: 'Egypt', logo: generateLogoUrl('CPS', 'Egypt') },
+  { name: 'Auxilio', region: 'Egypt', logo: generateLogoUrl('Auxilio', 'Egypt') },
   
   // KSA Partners
-  { name: 'Ghaya Pharmacy', region: 'Saudi Arabia', logo: 'https://picsum.photos/seed/ghaya/200/100' },
-  { name: 'Al Amal Pharmacy', region: 'Saudi Arabia', logo: 'https://picsum.photos/seed/alamal/200/100' },
-  { name: 'Rawaa Pharmacy', region: 'Saudi Arabia', logo: 'https://picsum.photos/seed/rawaa/200/100' },
+  { name: 'Ghaya Pharmacy', region: 'Saudi Arabia', logo: generateLogoUrl('Ghaya Pharmacy', 'Saudi Arabia') },
+  { name: 'Al Amal Pharmacy', region: 'Saudi Arabia', logo: generateLogoUrl('Al Amal Pharmacy', 'Saudi Arabia') },
+  { name: 'Rawaa Pharmacy', region: 'Saudi Arabia', logo: generateLogoUrl('Rawaa Pharmacy', 'Saudi Arabia') },
 ];
 
 export const CONTACT_INFO = {

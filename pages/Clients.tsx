@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
 import { CLIENTS } from '../constants';
-import { Quote, Globe, Building2, Landmark } from 'lucide-react';
+import { Quote, Globe } from 'lucide-react';
 import SEO from '../components/SEO';
 
 const fadeInUp: Variants = {
@@ -78,13 +78,24 @@ const Clients: React.FC = () => {
               <motion.div 
                 key={i} 
                 variants={fadeInUp}
-                className="group relative bg-gray-50 rounded-2xl p-8 flex items-center gap-6 border border-transparent hover:border-gray-200 hover:bg-white hover:shadow-xl transition-all duration-500"
+                className="group relative bg-gray-50 rounded-2xl p-6 flex items-center gap-6 border border-transparent hover:border-gray-200 hover:bg-white hover:shadow-xl transition-all duration-500"
               >
-                <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-gray-300 group-hover:text-[#E31E24] group-hover:bg-red-50 transition-colors shadow-sm">
-                  <Building2 size={24} />
+                <div className="w-24 h-24 rounded-xl bg-white flex items-center justify-center p-4 shadow-sm group-hover:shadow-md transition-all overflow-hidden flex-shrink-0">
+                  <img 
+                    src={partner.logo} 
+                    alt={`${partner.name} logo`}
+                    className="max-w-full max-h-full object-contain filter group-hover:brightness-105 transition-all"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = 'none';
+                    }}
+                  />
+                  {/* Fallback in case image doesn't exist yet */}
+                  <span className="text-[10px] font-black text-gray-300 group-hover:text-[#E31E24] absolute text-center px-2 pointer-events-none">
+                    {partner.name.split(' ')[0]}
+                  </span>
                 </div>
                 <div>
-                  <h3 className="text-lg font-black text-charcoal uppercase tracking-tight group-hover:text-[#E31E24] transition-colors">
+                  <h3 className="text-lg font-black text-charcoal uppercase tracking-tight group-hover:text-[#E31E24] transition-colors leading-tight mb-1">
                     {partner.name}
                   </h3>
                   <p className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Clinical Retail Partner</p>
@@ -121,13 +132,23 @@ const Clients: React.FC = () => {
               <motion.div 
                 key={i} 
                 variants={fadeInUp}
-                className="group bg-white rounded-3xl p-10 flex items-center gap-8 border border-gray-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500"
+                className="group bg-white rounded-3xl p-8 flex items-center gap-8 border border-gray-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500"
               >
-                <div className="w-16 h-16 rounded-2xl bg-gray-50 flex items-center justify-center text-gray-300 group-hover:text-green-600 group-hover:bg-green-50 transition-all duration-500 flex-shrink-0">
-                  <Landmark size={32} />
+                <div className="w-28 h-28 rounded-2xl bg-gray-50 flex items-center justify-center p-5 group-hover:bg-white transition-all duration-500 flex-shrink-0 border border-transparent group-hover:border-gray-100">
+                  <img 
+                    src={partner.logo} 
+                    alt={`${partner.name} logo`}
+                    className="max-w-full max-h-full object-contain filter group-hover:contrast-125 transition-all"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = 'none';
+                    }}
+                  />
+                  <span className="text-[10px] font-black text-gray-200 group-hover:text-green-600 absolute text-center px-2 pointer-events-none">
+                    {partner.name.split(' ')[0]}
+                  </span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-black text-charcoal mb-1 tracking-tight">{partner.name}</h3>
+                  <h3 className="text-xl font-black text-charcoal mb-2 tracking-tight">{partner.name}</h3>
                   <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Expansion Strategy Partner</p>
                 </div>
               </motion.div>
